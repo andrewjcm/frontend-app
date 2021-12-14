@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.site-container {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 400px;
+  max-width: 500px
+
+}
+.content {
+  padding: 20px;
+}
+.label {
+  padding-right: 5px;
+}
+
+.image-prof {
+  padding: 20px;
+  max-width: 200px;
+}
+.image-prof.right {
+  float: right;
+}
+.image.left {
+  float: left;
+}
+
+.header {
+  padding: 10px;
+  background: #edf2f4;
+  border-bottom: 1px solid #999;
+}
+.header a {
+  color: #0072ff;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+.header a:hover {
+  color: #8a0f53;
+}
+.header small {
+  color: #666;
+}
+.header .active {
+  color: #2c7613;
+}
+.header .creds {
+  float: right;
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+}
+.grid.item {
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.item-title {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.item-content {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+.item-login {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: #edf2f4;
+  border-top: 1px solid #999;
+  text-align: center;
+}
+
+.footer a {
+  color: #0072ff;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.footer a:hover {
+  color: #8a0f53;
+}
