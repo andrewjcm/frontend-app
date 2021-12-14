@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
-import Login from './Login';
+import Login from './Forms/Login';
 import Dashboard from './Dashboard';
 import Home from './Home';
 
