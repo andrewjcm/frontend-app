@@ -40,7 +40,7 @@ class NavBar extends React.Component {
           <NavLink className={(navData) => navData.isActive ? "active" : "" } to="/">Home</NavLink>
           <NavLink className={(navData) => navData.isActive ? "active" : "" } to="/dashboard">Dashboard</NavLink>
           <NavLink className="creds" to='/login' onClick={this.handleLogout}>Logout</NavLink>
-          <span className="logout"> Welcome, {user}!</span>
+          <span className="creds"> Welcome, {user}!</span>
         </div>
       );
 
