@@ -1,5 +1,5 @@
 import React from 'react';
-import { getUser, setUserSession, removeUserSession, getFormResponse, removeFormResponse } from './Utils/Common';
+import { getFormResponse, removeFormResponse } from './Utils/Common';
 import HealthProfileForm from './Forms/HealthProfileForm';
 import maleImage from './static/images/Male.jpg'
 import femaleImage from './static/images/Female.jpg'
@@ -42,9 +42,6 @@ class Dashboard extends React.Component{
   }
 
   render() {
-    const userStr = getUser();
-    const userChar = userStr.charAt(0);
-    const user = userChar.toUpperCase() + userStr.slice(1);
 
     const formResponse = getFormResponse();
     const died = "Sorry, you will die.";
@@ -54,17 +51,17 @@ class Dashboard extends React.Component{
     if (formResponse) {
       const age = formResponse.age;
       const sex = formResponse.sex === 1 ? "Female" : "Male";
-      const sexImage = formResponse.sex == 1 ? femaleImage : maleImage;
+      const sexImage = formResponse.sex === 1 ? femaleImage : maleImage;
 
-      let healthRisks = new Array();
+      let healthRisks = [];
       if (formResponse["age"] > 65 ) { healthRisks.push("Old age"); }
       for (var key in formResponse) {
         if (
           formResponse.hasOwnProperty(key)
-          && String(key) != String("sex")
-          && String(key) != String("died")
+          && String(key) !== String("sex")
+          && String(key) !== String("died")
         ) {
-          if (formResponse[key] == 1) {
+          if (formResponse[key] === 1) {
             healthRisks.push(String(key));
           }
         }
@@ -73,7 +70,7 @@ class Dashboard extends React.Component{
       return (
         <div className="grid-container">
           <div className="grid-item item-title">
-            <h3 >{ formResponse.died == 1 ? died : survive }</h3>
+            <h3 >{ formResponse.died === 1 ? died : survive }</h3>
           </div>
 
           <div className="grid-item item-content">
@@ -85,7 +82,7 @@ class Dashboard extends React.Component{
               <p>Health Risks: </p>
               <ul>
                 {
-                  healthRisks.length == 0 ? "None" : healthRisks.map((i) => <li>{i}</li>)
+                  healthRisks.length === 0 ? "None" : healthRisks.map((i) => <li>{i}</li>)
                 }
               </ul><br/>
               <input type="button" value="Reset" onClick={this.onResetForm}/>
