@@ -88,7 +88,12 @@ class App extends React.Component {
           </div>
         </BrowserRouter>
         <div className="footer">
-          By<a href="https://github.com/andrewjcm">andrewjcm</a>
+          By<a href="https://github.com/andrewjcm">andrewjcm</a><br/>
+          <small>
+            *Disclaimer: not all information on this site may be accurate
+            Do not treat it as medical advice. This is for technology
+            educational purposes only.
+          </small>
         </div>
       </div>
     );
