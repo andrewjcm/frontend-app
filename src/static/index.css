@@ -89,17 +89,13 @@ code {
   grid-column: 1 / span 3;
   grid-row: 4;
 }
-.item-survive{
+.item-title-vis1{
   grid-column: 1 / span 1;
   grid-row: 3;
 }
-.item-title-vis1{
-  grid-column: 1 / span 3;
-  grid-row: 4;
-}
 .item-data-vis1{
   grid-column: 1 / span 1;
-  grid-row: 5 / span 33;
+  grid-row: 4 / span 33;
   padding: 10px;
 }
 .item-title-vis2{
@@ -108,11 +104,17 @@ code {
 }
 .item-data-vis2 {
   grid-column: 1 / span 1;
-  grid-row: 39 / span 45;
+  grid-row: 39 / span 33;
   padding: 10px;
 }
-.item-data-vis3::after {
-  grid-column: 1 / span 3;
+.item-title-vis3{
+  grid-column: 1 / span 1;
+  grid-row: 73;
+}
+.item-data-vis3 {
+  grid-column: 1 / span 1;
+  grid-row: 74 / span 45;
+  padding: 10px;
 }
 .item-login {
   grid-column: 1 / span 3;
