@@ -26,7 +26,7 @@ const HealthProfileForm = (props) => {
     }
     setError(null);
     setLoading(true);
-    axios.post('http://localhost:8000/api/health-profile/',
+    axios.post('/api/health-profile/',
       data, { headers }
     ).then(response => {
       setLoading(false);

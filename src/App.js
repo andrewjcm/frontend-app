@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 
 import Login from './Forms/Login';
-import Dashboard from './Dashboard';
-import Home from './Home';
+import Dashboard from './Pages/Dashboard';
+import Home from './Pages/Home';
 
 import PrivateRoute from './Utils/PrivateRoute';
 import PublicRoute from './Utils/PublicRoute';
@@ -27,7 +27,7 @@ class App extends React.Component {
     if (!isAuth) {
       const refresh = getRefresh();
       const user = getUser();
-      axios.post('http://localhost:8000/api/token/refresh/', {
+      axios.post('/api/token/refresh/', {
         refresh: refresh,
         headers: {
           'Content-Type': 'application/json',

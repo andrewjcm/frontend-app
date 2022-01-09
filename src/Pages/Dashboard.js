@@ -1,8 +1,8 @@
 import React from 'react';
-import { getFormResponse, removeFormResponse } from './Utils/Common';
-import HealthProfileForm from './Forms/HealthProfileForm';
-import maleImage from './static/images/Male.jpg'
-import femaleImage from './static/images/Female.jpg'
+import { getFormResponse, removeFormResponse } from '../Utils/Common';
+import HealthProfileForm from '../Forms/HealthProfileForm';
+import maleImage from '../static/images/Male.jpg'
+import femaleImage from '../static/images/Female.jpg'
 
 
 class Dashboard extends React.Component{

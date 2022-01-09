@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import CustomAreaChart from './DataVis/CustomAreaChart';
-import CustomPieChart from './DataVis/CustomPieChart';
-import CustomBarChart from './DataVis/CustomBarChart';
+import CustomAreaChart from '../DataVis/CustomAreaChart';
+import CustomPieChart from '../DataVis/CustomPieChart';
+import CustomBarChart from '../DataVis/CustomBarChart';
 
 
 class Home extends React.Component{
@@ -17,7 +17,7 @@ class Home extends React.Component{
 
   componentDidMount(){
     if (!this.state.data) {
-      axios.get('http://localhost:8000/api/covid-data', {
+      axios.get('/api/covid-data/', {
         headers: {
           'Content-Type': 'application/json',
         }
