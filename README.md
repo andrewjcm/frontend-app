@@ -1,5 +1,5 @@
 # C964: Computer Science Capstone
-### Frontend: Django REST Framework
+### Frontend: React.js
 Backend found here: <https://github.com/andrewjcm/backend-app> <br/>
 Deployed app: <https://covid-survival-guide.herokuapp.com>
 ***
